@@ -35,8 +35,8 @@
 
           <p>Deliver To: {{order.address_type}}</p>
           <p>Address: {{order.street}}, {{order.city}} {{order.state}} {{order.zip}}</p>
-          <p>Order Number: {{order.order_id}} Order Date: {{order.order_date | date}}</p>
-          <p>Product: {{order.description}} Qty: {{order.quantity}} Price: {{order.unit_price | currency}}</p>
+          <p>Order Number: {{order.order_id}} - Order Date: {{order.order_date | date}}</p>
+          <p>Product: {{order.description}} - Qty: {{order.quantity}} - Price: {{order.unit_price | currency}}</p>
           <p>Order total: {{order.unit_price * order.quantity | currency}}</p>
 
         </div>

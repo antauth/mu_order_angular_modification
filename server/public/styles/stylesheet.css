@@ -1,33 +1,48 @@
 body {
+  font-family: monospace;
   background-color: grey;
+  overflow: scroll;
+}
+
+main {
+  background-color: white;
 }
 
 .customer-list button, .customer-list p {
     display: inline;
+    margin-top: 5px;
 }
 
-section {
-  display: inline-block;
-}
 
 .customer-list {
+  position: fixed;
+  top: 60px;
+  left: 25px;
   width:250px;
-  margin: 15px;
+}
+
+.customer {
+  background-color: peachpuff;
+  height: 30px;
+  border-radius: 5px;
+  margin: 5px
 }
 
 .order-history {
+  position: fixed;
+  top: 60px;
+  left: 350px;
   width: 500px;
 }
 
 .order {
   border-radius: 5px;
   background-color: beige;
-}
-
-.order p {
   padding: 5px;
+  margin: 5px;
 }
 
 .order p:first-child{
   border-bottom: 1px solid red;
+  padding: 5px;
 }
