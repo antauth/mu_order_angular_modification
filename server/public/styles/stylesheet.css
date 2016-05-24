@@ -1,0 +1,33 @@
+body {
+  background-color: grey;
+}
+
+.customer-list button, .customer-list p {
+    display: inline;
+}
+
+section {
+  display: inline-block;
+}
+
+.customer-list {
+  width:250px;
+  margin: 15px;
+}
+
+.order-history {
+  width: 500px;
+}
+
+.order {
+  border-radius: 5px;
+  background-color: beige;
+}
+
+.order p {
+  padding: 5px;
+}
+
+.order p:first-child{
+  border-bottom: 1px solid red;
+}

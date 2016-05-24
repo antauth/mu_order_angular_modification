@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Order History</title>
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+    <script src="/vendors/angular.min.js" charset="utf-8"></script>
+    <script src="/scripts/orderapp.js" charset="utf-8"></script>
+
+  </head>
+
+  <body ng-app="myApp">
+
+    <h1>Order History</h1>
+
+    <main ng-controller="CustomerList" ng-init="getCustomers()">
+
+      <section class="customer-list">
+
+        <div class="customer" ng-repeat="customer in customerList">
+
+          <p>{{customer.first_name}} {{customer.last_name}}</p>
+          <button type="button" ng-click="getOrders(customer.id)"  ng-if="customer.count > 0">Orders</button>
+          <p ng-if="customer.count == 0"> - No Orders</p>
+
+        </div>
+
+      </section>
+
+      <section class="order-history">
+
+        <div class="order" ng-repeat="order in orderList">
+
+          <p>Deliver To: {{order.address_type}}</p>
+          <p>Address: {{order.street}}, {{order.city}} {{order.state}} {{order.zip}}</p>
+          <p>Order Number: {{order.order_id}} Order Date: {{order.order_date | date}}</p>
+          <p>Product: {{order.description}} Qty: {{order.quantity}} Price: {{order.unit_price | currency}}</p>
+          <p>Order total: {{order.unit_price * order.quantity | currency}}</p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "order-histor-app",
+  "version": "1.0.0",
+  "description": "Order History",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Noah Zach Brandon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "pg": "^4.5.5"
+  }
+}
