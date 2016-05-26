@@ -32,12 +32,14 @@
       <section class="order-history">
 
         <div class="order" ng-repeat="order in orderList">
-
-          <p>Deliver To: {{order.address_type}}</p>
-          <p>Address: {{order.street}}, {{order.city}} {{order.state}} {{order.zip}}</p>
           <p>Order Number: {{order.order_id}} - Order Date: {{order.order_date | date}}</p>
-          <p>Product: {{order.description}} - Qty: {{order.quantity}} - Price: {{order.unit_price | currency}}</p>
-          <p>Order total: {{order.unit_price * order.quantity | currency}}</p>
+          <div ng-repeat="lineItem in order.lineItems">
+            <p>Deliver To: {{lineItem.address_type}}</p>
+            <p>Address: {{lineItem.street}}, {{lineItem.city}} {{lineItem.state}} {{lineItem.zip}}</p>
+            <p>Product: {{lineItem.description}} - Qty: {{lineItem.quantity}} - Price: {{lineItem.unit_price | currency}}</p>
+            <p>Order total: {{lineItem.unit_price * lineItem.quantity | currency}}</p>
+
+          </div>
 
         </div>
 
